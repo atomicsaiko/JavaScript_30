@@ -1,11 +1,28 @@
 body {
-  background-image: url(pexels-photo-283982.jpeg);
+  background:
+    /* top, transparent black, faked with gradient */
+    linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    /* bottom, image */
+    url(pexels-photo-283982.jpeg);
   background-size: 100%;
+  color: rgb(235, 235, 235);
+}
+
+#audio {
+  margin: 0.5em;
+}
+
+.audio {
+  display: block;
+  margin: 0.5em;
 }
 
 .key {
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid rgb(235, 235, 235);
   width: 100px;
   height: 100px;
   text-align: center;
