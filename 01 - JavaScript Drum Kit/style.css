@@ -1,0 +1,15 @@
+body {
+  background-image: url(pexels-photo-283982.jpeg);
+  background-size: 100%;
+}
+
+.key {
+  display: inline-block;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px
+  vertical-align: middle;
+  margin: 0.5em;
+}
