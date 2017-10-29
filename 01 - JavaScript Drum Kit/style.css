@@ -30,3 +30,14 @@ body {
   vertical-align: middle;
   margin: 0.5em;
 }
+
+.keyplaying {
+  display: inline-block;
+  border: 1px solid green;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px
+  vertical-align: middle;
+  margin: 0.5em;
+}

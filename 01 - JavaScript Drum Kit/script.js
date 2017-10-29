@@ -12,17 +12,28 @@ function whichKey() {
 
 function playAudio(instrument) {
   if (instrument === "cello") {
-    let cello = document.querySelectorAll("audio[data-instrument='cello']").item(0)
-    playbackToggle(cello)
+    let audioCello = document.querySelectorAll("audio[data-instrument='cello']").item(0)
+    let divCello = document.querySelectorAll("div[data-instrument='cello']").item(0)
+    playbackToggle(audioCello, divCello)
   } else if (instrument === "flute") {
-    let flute = document.querySelectorAll("audio[data-instrument='flute']").item(0)
-    playbackToggle(flute)
+    let audioFlute = document.querySelectorAll("audio[data-instrument='flute']").item(0)
+    let divFlute = document.querySelectorAll("div[data-instrument='flute']").item(0)
+    playbackToggle(audioFlute, divFlute)
   } else {
-    let trumpet = document.querySelectorAll("audio[data-instrument='trumpet']").item(0)
-    playbackToggle(trumpet)
+    let audioTrumpet = document.querySelectorAll("audio[data-instrument='trumpet']").item(0)
+    let divTrumpet = document.querySelectorAll("div[data-instrument='trumpet']").item(0)
+    playbackToggle(audioTrumpet, divTrumpet)
   }
 }
 
-function playbackToggle(element) {
-  element.paused ? element.play() : element.pause()
+function playbackToggle(audioElement, divElement) {
+  if (audioElement.paused) {
+    audioElement.play()
+    divElement.classList.remove("key")
+    divElement.classList.add("keyplaying")
+  } else {
+    audioElement.pause()
+    divElement.classList.remove("keyplaying")
+    divElement.classList.add("key")
+  }
 }
