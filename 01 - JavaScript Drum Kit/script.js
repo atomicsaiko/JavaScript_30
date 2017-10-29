@@ -1,5 +1,3 @@
-console.log(document.getElementsByClassName("key"))
-
 var key = document.getElementsByClassName("key")
 
 for(let i = 0; i < key.length; i++) {
@@ -15,12 +13,16 @@ function whichKey() {
 function playAudio(instrument) {
   if (instrument === "cello") {
     let cello = document.querySelectorAll("audio[data-instrument='cello']").item(0)
-    cello.play()
+    playbackToggle(cello)
   } else if (instrument === "flute") {
     let flute = document.querySelectorAll("audio[data-instrument='flute']").item(0)
-    flute.play()
+    playbackToggle(flute)
   } else {
     let trumpet = document.querySelectorAll("audio[data-instrument='trumpet']").item(0)
-    trumpet.play()
+    playbackToggle(trumpet)
   }
+}
+
+function playbackToggle(element) {
+  element.paused ? element.play() : element.pause()
 }
